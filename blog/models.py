@@ -9,6 +9,14 @@ class Tag(models.Model):
     class Meta:
         verbose_name = 'Tag'
         verbose_name_plural = 'Tags'
+        ordering = ['name']
+
+    def __str__(self) -> str:
+        return self.name
+
+    def save(self, force_insert: bool = ..., force_update: bool = ..., using: str | None = ..., update_fields: Iterable[str] | None = ...) -> None:
+        self.name = self.name.title()
+        return super().save(force_insert, force_update, using, update_fields)
 
 
 class Post(models.Model):

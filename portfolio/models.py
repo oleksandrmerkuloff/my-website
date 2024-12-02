@@ -25,3 +25,7 @@ class ProjectImage(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE,
                                 related_name='images')
     image = models.ImageField(upload_to='project_images/%Y/%m/%d/')
+
+    class Meta:
+        verbose_name = 'Project Image'
+        verbose_name_plural = 'Project images'
