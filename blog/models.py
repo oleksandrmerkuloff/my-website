@@ -1,4 +1,3 @@
-from datetime import datetime
 from django.utils.text import slugify
 from django.db import models
 
