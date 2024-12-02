@@ -1,6 +1,6 @@
-from django.template.defaultfilters import slugify
+from datetime import datetime
+from django.utils.text import slugify
 from django.db import models
-from typing import Iterable
 
 
 class Tag(models.Model):
@@ -14,14 +14,10 @@ class Tag(models.Model):
     def __str__(self) -> str:
         return self.name
 
-    def save(self, force_insert: bool = ..., force_update: bool = ..., using: str | None = ..., update_fields: Iterable[str] | None = ...) -> None:
-        self.name = self.name.title()
-        return super().save(force_insert, force_update, using, update_fields)
-
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField()
+    slug = models.SlugField(default='', null=False)
     outline = models.CharField(max_length=300)
     content = models.TextField()
     tags = models.ManyToManyField(Tag, related_name='posts')
@@ -33,15 +29,16 @@ class Post(models.Model):
         verbose_name_plural = 'Posts'
         ordering = ['-created_date']
 
-    def save(self, force_insert: bool = ..., force_update: bool = ..., using: str | None = ..., update_fields: Iterable[str] | None = ...) -> None:
-        self.slug = slugify(self.title)
-        return super().save(force_insert, force_update, using, update_fields)
+    def __str__(self) -> str:
+        return self.title
 
 
 class PostImage(models.Model):
+    name = models.CharField(max_length=100)
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='images')
     image = models.ImageField(upload_to='post_images/%Y/%m/%d/')
+    created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Post Image'
