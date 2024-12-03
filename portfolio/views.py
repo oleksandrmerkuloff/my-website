@@ -1,10 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Project
+
 
 def portfolio_page(request):
-    return HttpResponse('<h1>Portfolio page</h1>')
+    projects = Project.objects.all()
+    return render(request, 'portfolio/projects.html',
+                  {
+                      'projects': projects
+                  })
 
 
 def single_project(request, project_id):
-    return HttpResponse(f'<h1>Project: {project_id}</h1>')
+    project = Project.objects.get(pk=project_id)
+    images = project.images.all()
+    return render(request, 'portfolio/single_project.html',
+                  {
+                      'project': project,
+                      'images': images
+                      })
