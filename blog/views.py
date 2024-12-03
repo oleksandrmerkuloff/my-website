@@ -1,10 +1,23 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+from .models import Post
 
 
 def blog_page(request):
-    return HttpResponse('<h1>Blog page</h1>')
+    posts = Post.objects.all()
+    return render(request, 'blog/posts.html',
+                  {
+                      'posts': posts
+                  })
 
 
 def single_post(request, post_id):
-    return HttpResponse(f'<h1>Post: {post_id}</h1>')
+    post = Post.objects.get(pk=post_id)
+    tags = post.tags.all()
+    images = post.images.all()
+    return render(request, 'blog/single_post.html',
+                  {
+                      'post': post,
+                      'tags': tags,
+                      'images': images
+                    })
