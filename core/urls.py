@@ -27,6 +27,7 @@ urlpatterns = [
     path('', views.home_page, name='home'),
     path('blog/', include('blog.urls')),
     path('portfolio/', include('portfolio.urls')),
+    path('contacts/', views.contacts, name='my-contacts')
 ]
 
 if settings.DEBUG:
