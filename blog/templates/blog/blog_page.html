@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My blog{% endblock %}
+
+{% block css_style %}
+<link rel="stylesheet" href="{% static "blog/blog_page.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="posts-container">
+        {% for _ in '1234567891' %}
+            {% include 'blog/includes/post_card.html' %}
+        {% endfor %}
+    </div>
+{% endblock %}
