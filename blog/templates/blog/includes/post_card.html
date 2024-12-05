@@ -1,0 +1,21 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static "blog/post_card.css" %}">
+
+<div class="card">
+    {% if request.path != '/' %}
+    <div class="card-img-holder">
+      <img src="https://images.unsplash.com/photo-1640102953836-5651f5d6b240?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80" alt="Blog image">
+    </div>
+    {% endif %}
+    <h3 class="blog-title">Learn Microinteraction</h3>
+    <p class="blog-time">Monday Jan 20, 2020</p>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident incidunt nulla atque omnis fugiat facere enim, ex, animi rem, magni culpa praesentium reiciendis rerum deleniti sed repellat doloremque id adipisci?
+    </p>
+    <div class="options">
+      <span>
+        <a href="" class="post-link">Read Full Post</a>
+      </span>
+    </div>
+  </div>
