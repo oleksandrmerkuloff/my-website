@@ -1,0 +1,30 @@
+#container {
+    width: 80%;
+}
+
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.big-project-container {
+    width: 60%;
+    max-height: 500px;
+    border: 1px solid black;
+    margin: 30px 0;
+    background-color: rgb(223, 211, 211);
+    border-radius: 10%;
+    color: #2A623D;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.project-img {
+    width: 80%;
+    height: 400px;
+    border-radius: 20%;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}My Portfolio{% endblock %}
+
+{% block css_style %}
+    <link rel="stylesheet" href="{% static "blog/portfolio_page.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="projects-container">
+        {% for _ in '1234567890' %}
+            {% include "blog/includes/big_project_card.html" %}
+        {% endfor %}
+    </div>
+{% endblock %}
