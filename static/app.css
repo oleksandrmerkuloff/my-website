@@ -23,7 +23,7 @@ html, body {
 }
 
 #website-logo {
-    width: 5%;
+    width: 50px;
     height: auto;
     border: 2px dotted #5C8374;
     border-radius: 50%;
@@ -35,7 +35,6 @@ html, body {
 }
 
 #navigation-list {
-    width: 50%;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -76,16 +75,28 @@ html, body {
 }
 
 /* Media Queries for Responsive Design */
+@media (min-width: 768px){
+    #website-logo {
+        width: 5%;
+    }
+
+    #navigation-list {
+        width: 50%;
+    }
+}
+
 @media (max-width: 768px) {
     #website-header {
         flex-direction: column;
         height: auto;
         text-align: center;
+        padding-bottom: 10px;
     }
 
     #website-logo {
         margin-bottom: 10px;
         width: 70px;
+        margin: 20px;
     }
 
     #website-navigation {
