@@ -17,11 +17,12 @@
         <img src="{% static 'images/logo-cut.png' %}" alt="website-logo" id="website-logo">
         <nav id="website-navigation">
             <ul id="navigation-list">
-                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a></li>
                 <li class="nav-item"><a href="{% url 'my-contacts' %}" class="nav-link">Contacts</a></li>
             </ul>
+            <p id="motto">Per tenebras ad lucem</p>
         </nav>
     </header>
     <main id="container">

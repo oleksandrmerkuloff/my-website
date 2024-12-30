@@ -6,10 +6,11 @@ from .models import Project
 
 def portfolio_page(request):
     projects = Project.objects.all()
-    return render(request, 'portfolio/projects.html',
-                  {
-                      'projects': projects
-                  })
+    return HttpResponse('Project')
+    # return render(request, 'portfolio/portfolio_page.html',
+    #               {
+    #                   'projects': projects
+    #               })
 
 
 def single_project(request, project_id):

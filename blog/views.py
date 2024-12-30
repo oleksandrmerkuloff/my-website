@@ -5,7 +5,7 @@ from .models import Post
 
 def blog_page(request):
     posts = Post.objects.all()
-    return render(request, 'blog/posts.html',
+    return render(request, 'blog/blog_page.html',
                   {
                       'posts': posts
                   })
