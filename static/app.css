@@ -1,5 +1,4 @@
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     font-family: "Noto Sans", sans-serif;
@@ -72,9 +71,6 @@ html, body {
 }
 
 #website-footer {
-    position: absolute;
-    bottom: 0;
-    flex-shrink: 1;
     display: flex;
     justify-content: center;
     width: 100%;
