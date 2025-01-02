@@ -9,9 +9,7 @@
 {% endblock %}
 
 {% block content %}
-    <div id="projects-container">
-        {% for _ in '1234567890' %}
-            {% include "portfolio/includes/project_card.html" %}
-        {% endfor %}
-    </div>
+    {% for _ in '1234567890' %}
+        {% include "portfolio/includes/project_card.html" %}
+    {% endfor %}
 {% endblock %}

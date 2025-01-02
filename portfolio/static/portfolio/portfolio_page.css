@@ -1,8 +1,33 @@
-#projects-container {
-    width: 80%;
-    margin: 50px auto 0;
+#website-header {
+    margin-bottom: 80px;
 }
 
 .card {
-    width: 90%;
+    display: flex;
+    width: 70%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.project-img {
+    width: 300px;
+    height: 200px;
+    margin-right: 60px;
+    border-radius: 4%;
+}
+
+.card-body {
+    width: 50%;
+    flex: 1;
+}
+
+.project-link {
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    float: right;
 }
