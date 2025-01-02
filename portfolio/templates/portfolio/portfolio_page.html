@@ -9,7 +9,10 @@
 {% endblock %}
 
 {% block content %}
-    {% for _ in '1234567890' %}
-        {% include "portfolio/includes/project_card.html" %}
+    {% for index in '12345' %}
+    {% include "portfolio/includes/project_card.html" %}
+        {% if index != '5' %}
+            <hr class="project-separator">
+        {% endif %}
     {% endfor %}
 {% endblock %}

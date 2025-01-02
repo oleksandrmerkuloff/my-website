@@ -23,11 +23,22 @@
 
 .project-link {
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 20%;
     padding: 10px;
     margin-top: 20px;
     text-decoration: none;
     color: white;
     position: relative;
     float: right;
+}
+
+.project-link:hover {
+    background-color: #93B1A6;
+    color: #faf7f0;
+}
+
+.project-separator {
+    border: 1px solid white;
+    width: 60%;
+    margin: 20px auto;
 }
