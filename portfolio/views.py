@@ -13,10 +13,11 @@ def portfolio_page(request):
 
 
 def single_project(request, project_id):
-    project = Project.objects.get(pk=project_id)
-    images = project.images.all()
+    # project = Project.objects.get(pk=project_id)
+    # images = project.images.all()
     return render(request, 'portfolio/single_project.html',
-                  {
-                      'project': project,
-                      'images': images
-                      })
+                #   {
+                #       'project': project,
+                #       'images': images
+                #       }
+                )

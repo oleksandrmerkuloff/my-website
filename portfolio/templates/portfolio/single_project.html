@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Project title{% endblock %}
+
+{% block css_style %}
+    <link rel="stylesheet" href="{% static "portfolio/single_project.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="project-container">
+        <!-- Created DAte and Updated Date -->
+        <div id="dates">
+            <p>Posted: Mar 22, 2023</p>
+            <p>Last update: Mar 23, 2023</p>
+        </div>
+        <!-- Project TITLE -->
+        <h1>Review: The Cat Who Ate My Friend by Steve Paul</h1>
+        <!-- Project OUTLINE -->
+        <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</p>
+
+        <img src="https://picsum.photos/700/400" alt="project-img" id="project-img">
+
+        <div>
+            <h3>Create Relevant Content</h3>
+            <p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (#vacation #dream #summer) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, #hashtag away.</p>
+            <h3>Get Inspired</h3>
+            <p>To keep up with all things Wix, including website building tips and interesting articles, head over to to the Wix Blog. You may even find yourself inspired to start crafting your own blog, adding unique content, and stunning images and videos. Start creating your own blog now. Good luck!</p>
+        </div>
+
+        <div id="counters">
+            <!-- Views count -->
+            <p>Views: 0</p>
+            <!-- Likes count -->
+            <p>Likes: 0</p>
+        </div>
+    </div>
+{% endblock %}
