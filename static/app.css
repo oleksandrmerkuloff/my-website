@@ -18,6 +18,7 @@ html, body {
     opacity: 0.9;
     padding: 0 20px;
     box-sizing: border-box;
+    margin-bottom: 80px;
 }
 
 #website-logo {

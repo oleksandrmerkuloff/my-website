@@ -1,4 +1,4 @@
-#container {
+/* #container {
     width: 80%;
 }
 
@@ -11,4 +11,23 @@
 .card {
     margin: 2rem 0;
     flex: 0 0 30%;
+} */
+
+#posts-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#posts-container > .post-card {
+    flex: 30%;
+    margin-bottom: 10px;
+}
+
+.post-link {
+    color: white;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    color: #93B1A6;
 }
