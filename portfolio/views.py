@@ -4,7 +4,7 @@ from .models import Project
 
 
 def portfolio_page(request):
-    projects = Project.objects.all()
+    projects = Project.objects.prefetch_related('images')
     return render(request, 'portfolio/portfolio_page.html',
                   {
                       'projects': projects

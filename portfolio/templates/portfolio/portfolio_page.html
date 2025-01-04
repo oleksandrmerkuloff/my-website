@@ -9,9 +9,9 @@
 {% endblock %}
 
 {% block content %}
-    {% for index in '12345' %}
-    {% include "portfolio/includes/project_card.html" %}
-        {% if index != '5' %}
+    {% for project in projects %}
+        {% include "portfolio/includes/project_card.html" %}
+        {% if project != projects.last %}
             <hr class="project-separator">
         {% endif %}
     {% endfor %}

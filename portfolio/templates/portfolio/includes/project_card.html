@@ -1,10 +1,10 @@
 <div class="card">
   <div class="img-place">
-    <img src="https://picsum.photos/536/354" alt="project-img" class="project-img">
+    <img src="{{ project.images.first.image.url }}" alt="project-img" class="project-img">
   </div>
   <div class="card-body">
-    <h3 class="title">Card title</h5>
-    <p class="outline">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <a href="{% url "single-project-page" project_id=2 %}" class="project-link">To project</a>
+    <h3 class="title">{{ project.title }}</h5>
+    <p class="outline">{{ project.outline }}</p>
+    <a href="{% url "single-project-page" project_id=project.pk %}" class="project-link">To project</a>
   </div>
 </div>
