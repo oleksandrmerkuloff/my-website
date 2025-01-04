@@ -6,9 +6,13 @@ class Project(models.Model):
     title = models.CharField(max_length=75)
     outline = models.CharField(max_length=200)
     content = models.TextField()
-    slug = models.SlugField(default='', null=False)
+    slug = models.SlugField(default='', null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Project'
