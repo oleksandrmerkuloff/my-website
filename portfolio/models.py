@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 
 class Project(models.Model):
     title = models.CharField(max_length=75)
-    outline = models.CharField(max_length=200)
+    outline = models.CharField(max_length=300)
     content = models.TextField()
     slug = models.SlugField(default='', null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)

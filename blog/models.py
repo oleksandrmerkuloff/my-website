@@ -16,12 +16,16 @@ class Tag(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField(default='', null=False)
+    slug = models.SlugField(default='', blank=True, null=False)
     outline = models.CharField(max_length=300)
     content = models.TextField()
     tags = models.ManyToManyField(Tag, related_name='posts')
     likes = models.IntegerField(default=0)
     created_date = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Post'
