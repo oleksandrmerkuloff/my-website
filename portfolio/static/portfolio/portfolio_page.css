@@ -1,8 +1,10 @@
 .card {
     display: flex;
-    width: 70%;
+    width: 60%;
     padding: 20px;
     margin: 0 auto;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .project-img {
@@ -23,20 +25,19 @@
     margin-top: 20px;
     text-decoration: none;
     color: white;
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .project-link:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
     border: 1px solid black;
-    /* background-color: #93B1A6;
-    color: #faf7f0; */
 }
 
 .project-separator {
     border: 1px solid white;
-    width: 60%;
-    margin: 20px auto;
+    width: 50%;
+    margin: 50px auto;
 }
