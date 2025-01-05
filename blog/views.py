@@ -11,14 +11,13 @@ def blog_page(request):
                   })
 
 
-def single_post(request, post_id):
-    # post = Post.objects.get(pk=post_id)
-    # tags = post.tags.all()
-    # images = post.images.all()[0]
+def single_post(request, post_slug):
+    post = Post.objects.get(slug=post_slug)
+    tags = post.tags.all()
+    images = post.images.all()[0]
     return render(request, 'blog/single_post.html',
-                #   {
-                    #   'post': post,
-                    #   'tags': tags,
-                    #   'images': images
-                    # }
-                )
+                  {
+                      'post': post,
+                      'tags': tags,
+                      'images': images
+                    })

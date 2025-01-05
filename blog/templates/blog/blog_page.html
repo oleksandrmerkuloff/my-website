@@ -9,7 +9,7 @@
 
 {% block content %}
     <div id="posts-container">
-        {% for _ in '123456789' %}
+        {% for post in posts %}
             {% include 'blog/includes/post_card.html' %}
         {% endfor %}
     </div>

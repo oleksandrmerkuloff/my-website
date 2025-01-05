@@ -11,8 +11,8 @@ def portfolio_page(request):
                   })
 
 
-def single_project(request, project_id):
-    project = Project.objects.get(pk=project_id)
+def single_project(request, project_slug):
+    project = Project.objects.get(slug=project_slug)
     images = project.images.all()[0]
     return render(request, 'portfolio/single_project.html',
                   {

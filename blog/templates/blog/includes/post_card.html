@@ -1,4 +1,4 @@
 <div class="post-card">
-    <img src="https://picsum.photos/400/300" alt="post-img" class="post-card-img">
-    <h3><a href="{% url "single-post-page" post_id=1 %}" class="post-link">Glasgow Book Festival 2030: The Highlights</a></h3>
+    <img src="{{ post.images.first.image.url }}" alt="post-img" class="post-card-img">
+    <h3><a href="{% url "single-post-page" post_slug=post.slug %}" class="post-link">{{post.title}}</a></h3>
 </div>

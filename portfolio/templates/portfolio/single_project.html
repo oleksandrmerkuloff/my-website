@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Project title{% endblock %}
+{% block title %}{{ project.title }}{% endblock %}
 
 {% block css_style %}
     <link rel="stylesheet" href="{% static "portfolio/single_project.css" %}">
