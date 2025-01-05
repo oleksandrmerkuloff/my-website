@@ -1,12 +1,37 @@
 #post-container {
     margin: 0 auto;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#post-title {
+    margin: 5px 0;
+}
+
+#post-tags {
+    display: flex;
+}
+
+.tag {
+    padding: 5px;
+    background-color: #478778;
+    border-radius: 8%;
+    color: 	#00FFFF;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 #post-img {
-    width: 100%;
-    margin: 20px 0;
+    max-width: 740px;
+    max-height: 500px;
+    margin: 20px auto;
     border-radius: 3%;
+}
+
+#post-content {
+    width: 90%;
 }
 
 #counters {

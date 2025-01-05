@@ -12,21 +12,28 @@
         <!-- Created DAte -->
         <p>Posted: {{ post.created_date }}</p>
         <!-- POST TITLE -->
-        <h1>{{ post.title }}</h1>
+        <h1 id="post-title">{{ post.title }}</h1>
+
+        <div id="post-tags">
+            {% for tag in tags %}
+                <p class="tag">{{ tag.name|title }}</p>
+            {% endfor %}
+        </div>
+
         <!-- POST OUTLINE -->
         <p>{{ post.outline }}</p>
 
         <img src="{{ images.image.url }}" alt="post-img" id="post-img">
 
-        <div>
+        <div id="post-content">
             {{ post.content }}
         </div>
 
-        <div id="counters">
+        <!-- <div id="counters"> -->
             <!-- Views count -->
-            <p>Views: 0</p>
+            <!-- <p>Views: 0</p> -->
             <!-- Likes count -->
-            <p>Likes: {{ post.likes }}</p>
-        </div>
+            <!-- <p>Likes: {{ post.likes }}</p>
+        </div> -->
     </div>
 {% endblock %}

@@ -1,6 +1,9 @@
 #project-container {
     margin: 0 auto;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #dates {
@@ -12,9 +15,14 @@
 }
 
 #project-img {
-    width: 100%;
+    max-width: 740px;
+    max-height: 500px;
     margin: 20px 0;
     border-radius: 3%;
+}
+
+#project-content {
+    width: 90%;
 }
 
 #counters {
