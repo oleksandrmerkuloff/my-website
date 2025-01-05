@@ -20,8 +20,8 @@
 }
 
 .project-link {
-    border-radius: 30%;
-    padding: 10px;
+    border-radius: 15%;
+    padding: 7px;
     margin-top: 20px;
     text-decoration: none;
     color: white;
@@ -33,7 +33,7 @@
 .project-link:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
-    border: 1px solid black;
+    border: 1px solid rgb(127, 209, 80);
 }
 
 .project-separator {

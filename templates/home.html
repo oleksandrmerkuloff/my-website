@@ -1,1 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block css_style %}
+    <link rel="stylesheet" href="{% static "home_page.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="my-cv">
+        <div id="welcome-section">    
+            <img src="{% static 'images/my-img.jpg' %}" alt="my-img" id="my-img">
+            <p id="welcome-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <hr id="cv-separator">
+        <div id="about-section">
+            I am a master's student in cybersecurity, who is looking to start a career in IT as a Python developer.
+I ha    ve the skills to work effectively both independently and in a team. I am distinguished by my sociability, creative approach to solving problems, leadership qualities and a desire for constant development.
+Desp    ite the lack of commercial experience, I have a solid theoretical base, practical experience in independent development and organizing teams to carry out various projects. Thanks to my education in cybersecurity, I have additional experience in cryptography, data masking and steganography.
+I al    ways work with full dedication, initiative and focus on achieving results. And I will be happy to join your team.
+        </div>
+    </div>
+{% endblock %}
