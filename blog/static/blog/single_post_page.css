@@ -54,6 +54,7 @@
     background: none;
     border: none;
     float: inline-end;
+    padding-right: 0;
 }
 
 #like-button:active {
