@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Post
 
@@ -29,3 +29,20 @@ def single_post(request, post_slug):
                       'tags': tags,
                       'images': images
                     })
+
+
+def like_post(request, post_pk):
+    post = Post.objects.get(pk=post_pk)
+
+    session_key = f'liked_post_{post.pk}'
+
+    if request.session.get(session_key, False):
+        post.likes -= 1
+        request.session[session_key] = False
+    else:
+        post.likes += 1
+        request.session[session_key] = True
+
+    post.save()
+
+    return redirect('single-post-page', post_slug=post.slug)

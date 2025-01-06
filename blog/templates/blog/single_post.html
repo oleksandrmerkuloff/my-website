@@ -31,9 +31,13 @@
 
         <div id="counters">
             <!-- Views count -->
-            <p>Views: {{ post.views }}</p>
+            <p id="views-counter">Views: {{ post.views }}</p>
             <!-- Likes count -->
-            <p>Likes: {{ post.likes }}</p>
+            <form method="post" action="{% url "like_post" post.pk %}" id="likes-form">
+                {% csrf_token %}
+                <label for="like-button">Likes: {{ post.likes }}</label>
+                <button type="submit" id="like-button">🤍</button>
+            </form>
         </div>
     </div>
 {% endblock %}

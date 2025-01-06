@@ -41,3 +41,23 @@
     font-size: 12;
     margin-top: 40px;
 }
+
+#views-counter {
+    margin: 5px 0;
+}
+
+#likes-form {
+    margin: 5px 0;
+}
+
+#like-button {
+    background: none;
+    border: none;
+    float: inline-end;
+}
+
+#like-button:active {
+    border-radius: 25%;
+    padding-top: 0;
+    transform: scale(1.5);
+}
