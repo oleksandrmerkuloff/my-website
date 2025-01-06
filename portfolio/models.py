@@ -7,6 +7,7 @@ class Project(models.Model):
     outline = models.CharField(max_length=300)
     content = models.TextField()
     slug = models.SlugField(default='', null=True, blank=True)
+    views = models.IntegerField(default=0)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
 
