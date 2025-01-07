@@ -1,13 +1,19 @@
 from django.shortcuts import render, redirect
+from django.core.paginator import Paginator
 
 from .models import Project
 
 
 def portfolio_page(request):
-    projects = Project.objects.prefetch_related('images')
+    project_list = Project.objects.prefetch_related('images')
+    paginator = Paginator(project_list, 4)
+
+    page_number = request.GET.get('page')
+    page_object = paginator.get_page(page_number)
+
     return render(request, 'portfolio/portfolio_page.html',
                   {
-                      'projects': projects
+                      'page_object': page_object
                   })
 
 

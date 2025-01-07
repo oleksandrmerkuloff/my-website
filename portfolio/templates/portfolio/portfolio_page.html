@@ -9,10 +9,22 @@
 {% endblock %}
 
 {% block content %}
-    {% for project in projects %}
+    {% for project in page_object %}
         {% include "portfolio/includes/project_card.html" %}
-        {% if project != projects.last %}
-            <hr class="project-separator">
-        {% endif %}
+        <hr class="project-separator">
     {% endfor %}
+    <div id="pagination">
+        <span class="step-links">
+            {% if page_object.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_object.previous_page_number }}">previous</a>
+            {% endif %}
+            <span class="current">
+                Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.
+            </span>
+            {% if page_object.has_next %}
+                <a href="?page={{ page_object.next_page_number }}">next</a>
+                <a href="?page={{ page_object.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
 {% endblock %}
