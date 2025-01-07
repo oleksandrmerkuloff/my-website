@@ -1,13 +1,19 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 
 from .models import Post
 
 
 def blog_page(request):
-    posts = Post.objects.prefetch_related('images')
+    post_list = Post.objects.prefetch_related('images')
+    paginator = Paginator(post_list, 2)
+
+    page_number = request.GET.get('page')
+    page_object = paginator.get_page(page_number)
+
     return render(request, 'blog/blog_page.html',
                   {
-                      'posts': posts
+                      'page_object': page_object
                   })
 
 
