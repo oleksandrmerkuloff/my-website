@@ -3,8 +3,8 @@ from django.template.defaultfilters import slugify
 
 
 class Project(models.Model):
-    title = models.CharField(max_length=75)
-    outline = models.CharField(max_length=300)
+    title = models.CharField(max_length=150)
+    outline = models.CharField(max_length=450)
     content = models.TextField()
     slug = models.SlugField(default='', null=True, blank=True)
     views = models.IntegerField(default=0)

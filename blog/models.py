@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=75, unique=True)
+    name = models.CharField(max_length=100, unique=True)
 
     class Meta:
         verbose_name = 'Tag'
@@ -15,9 +15,9 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=150)
     slug = models.SlugField(default='', blank=True, null=False)
-    outline = models.CharField(max_length=300)
+    outline = models.CharField(max_length=450)
     content = models.TextField()
     tags = models.ManyToManyField(Tag, related_name='posts')
     views = models.IntegerField(default=0)
