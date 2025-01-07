@@ -6,7 +6,7 @@ from .models import Post
 
 def blog_page(request):
     post_list = Post.objects.prefetch_related('images')
-    paginator = Paginator(post_list, 2)
+    paginator = Paginator(post_list, 3)
 
     page_number = request.GET.get('page')
     page_object = paginator.get_page(page_number)
