@@ -9,5 +9,39 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Here will be my contacts</h1>
+    <div id="contacts-holder">
+        <h2>Contact me</h2>
+        <p class="contact-page-text">Hello, if you want to chat with me, here are my contacts. I will always be happy to meet new people and talk about different topics.
+            Although I do not promise that I will be able to answer everything to everyone, but I do try to get back to everyone who contacts me.
+        </p>
+        <p class="contact-page-text">
+            It would be especially interesting to chat with other developers, starting with advice for me and ending with proposals for cooperation. 
+After all, I have a small team of beginners and maybe you will join us in the future😊
+        </p>
+        <div class="contact">
+            <img src="{% static "images/contact-icons/email.png" %}" alt="email" class="contact-img">
+            <p class="contact-title">Email</p>
+            <a href="oleksandrmerkuloff@gmail.com" class="contact-link">oleksandrmerkuloff@gmail.com</a>
+        </div>
+        <div class="contact">
+            <img src="{% static "images/contact-icons/telegram.png" %}" alt="telegram" class="contact-img">
+            <p class="contact-title">Telegram</p>
+            <a href="https://t.me/oleksandr_merk" class="contact-link">https://t.me/oleksandr_merk</a>
+        </div>
+        <div class="contact">
+            <img src="{% static "images/contact-icons/linkedin.png" %}" alt="linkedin" class="contact-img">
+            <p class="contact-title">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/oleksandr-merkulov-65b36b309/" class="contact-link">https://www.linkedin.com/in/oleksandr-merkulov-65b36b309/</a>
+        </div>
+        <div class="contact">
+            <img src="{% static "images/contact-icons/threads.png" %}" alt="threads" class="contact-img">
+            <p class="contact-title">Threads</p>
+            <a href="https://www.threads.net/@oleksandrmerkulov_crystal1s?invite=0" class="contact-link">https://www.threads.net/@oleksandrmerkulov_crystal1s?invite=0</a>
+        </div>
+        <div class="contact">
+            <img src="{% static "images/contact-icons/github.png" %}" alt="github" class="contact-img">
+            <p class="contact-title">GitHub</p>
+            <a href="https://github.com/oleksandrmerkuloff" class="contact-link">https://github.com/oleksandrmerkuloff</a>
+        </div>
+    </div>
 {% endblock %}
