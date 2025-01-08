@@ -1,10 +1,11 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Inconsolata", serif;
     font-weight: 400;
     background: #183D3D;
     flex-direction: column;
+    color: white;
 }
 
 #website-header {
@@ -15,7 +16,6 @@ html, body {
     height: 15vh;
     box-shadow: rgba(181, 181, 181, 0.3) 0px 15px 12px;
     background-color: #000000;
-    opacity: 0.9;
     padding: 0 20px;
     box-sizing: border-box;
     margin-bottom: 80px;
@@ -30,7 +30,7 @@ html, body {
 
 #website-navigation {
     flex-grow: 1;
-    font-size: 1.2em;
+    font-size: 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,9 +45,9 @@ html, body {
 }
 
 #motto {
-    font-family: 'Garamond', serif;
-    color: #faf7f0;
-    font-style: italic;
+    font-family: "Dancing Script", serif;
+    color: #e1ece8;
+    font-style: normal;
     font-size: 24px;
     margin-right: 5%;
 }
@@ -59,7 +59,7 @@ html, body {
 }
 
 .nav-link:hover {
-    color: #faf7f0;
+    color: #faf8f3;
 }
 
 #container {
