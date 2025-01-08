@@ -11,6 +11,7 @@
 .post-card {
     text-align: center;
     margin-bottom: 50px;
+    font-size: 1.2em;
 }
 
 .post-card-img {
@@ -31,8 +32,10 @@
 #pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 20px auto;
     color: white;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 .step-links a, .step-links span {
