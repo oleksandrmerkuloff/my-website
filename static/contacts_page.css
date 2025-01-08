@@ -1,10 +1,15 @@
 #contacts-holder {
     width: 60%;
     margin: 0 auto;
+    font-size: 1.4em;
 }
 
-.conatct {
-    margin-bottom: 15px;
+.contact {
+    margin-bottom: 25px;
+}
+
+.contact-title {
+    margin: 10px 0;
 }
 
 .contact-img {
