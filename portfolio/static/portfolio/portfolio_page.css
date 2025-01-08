@@ -19,31 +19,33 @@
     flex: 1;
 }
 
+.title {
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+.outline {
+    font-size: 1.2em;
+}
+
 .project-link {
-    border-radius: 15%;
-    padding: 7px;
-    margin-top: 20px;
+    border-radius: 5%;
+    padding: 7px 7px 7px 0;
     text-decoration: none;
     color: white;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 .project-link:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-    border: 1px solid rgb(127, 209, 80);
+    text-decoration: underline;
+    text-decoration-color: gold;
 }
 
 .project-separator {
     border: 1px solid white;
     width: 50%;
     margin: 50px auto;
-}
-
-.project-separator:last-child {
-    width: 100%;
 }
 
 #pagination {
