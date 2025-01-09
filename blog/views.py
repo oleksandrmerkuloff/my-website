@@ -1,5 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
+import markdown
 
 from .models import Post
 
@@ -19,6 +20,7 @@ def blog_page(request):
 
 def single_post(request, post_slug):
     post = Post.objects.get(slug=post_slug)
+    post_content = markdown.markdown(post.content)
     tags = post.tags.all()
     images = post.images.all()[0]
 
@@ -32,6 +34,7 @@ def single_post(request, post_slug):
     return render(request, 'blog/single_post.html',
                   {
                       'post': post,
+                      'post_content': post_content,
                       'tags': tags,
                       'images': images
                     })

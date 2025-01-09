@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
+import markdown
 
 from .models import Project
 
@@ -19,6 +20,7 @@ def portfolio_page(request):
 
 def single_project(request, project_slug):
     project = Project.objects.get(slug=project_slug)
+    project_content = markdown.markdown(project.content)
     images = project.images.all()[0]
 
     session_key = f'viewed_project_{project.pk}'
@@ -31,6 +33,7 @@ def single_project(request, project_slug):
     return render(request, 'portfolio/single_project.html',
                   {
                       'project': project,
+                      'project_content': project_content,
                       'images': images
                       })
 

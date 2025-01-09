@@ -22,7 +22,7 @@
         <img src="{{ images.image.url }}" alt="project-img" id="project-img">
 
         <div id="project-content">
-            {{ project.content }}
+            {{ project_content|safe }}
         </div>
 
         <div id="counters">

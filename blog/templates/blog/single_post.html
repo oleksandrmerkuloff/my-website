@@ -26,7 +26,7 @@
         <img src="{{ images.image.url }}" alt="post-img" id="post-img">
 
         <div id="post-content">
-            {{ post.content }}
+            {{ post_content|safe }}
         </div>
 
         <div id="counters">
