@@ -1,0 +1,33 @@
+#contacts-holder {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.4em;
+}
+
+.contact {
+    margin-bottom: 25px;
+}
+
+.contact-title {
+    margin: 10px 0;
+}
+
+.contact-img {
+    max-height: 25px;
+    float: left;
+    margin-right: 5px;
+}
+
+.contact-title {
+    font-size: 20px;
+}
+
+.contact-link {
+    color: white;
+    text-decoration-color: gold;
+}
+
+.contact-link:hover {
+    background-color: gold;
+    color: #8b4513;
+}

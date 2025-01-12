@@ -1,0 +1,45 @@
+#my-cv {
+    width: 60%;
+    margin: 0 auto;
+    color: rgb(241, 235, 235);
+}
+
+#welcome-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+#my-img {
+    width: 400px;
+    height: 300px;
+    border-radius: 3%;
+    margin-right: 20px;
+}
+
+#welcome-text {
+    width: 50%;
+    text-align: justify;
+    font-size: 1.2em;
+    overflow: hidden;
+}
+
+#cv-separator {
+    color: white;
+    margin: 50px auto;
+    width: 70%;
+}
+
+#about-section {
+    font-size: 1.2em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#resume-link {
+    text-decoration-color: gold;
+    color: rgb(241, 235, 235);
+}
+
+#resume-link:hover {
+    background-color: #476423;
+}

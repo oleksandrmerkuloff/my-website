@@ -1,0 +1,66 @@
+#project-container {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#dates {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    font-size: 12;
+    margin-bottom: 20px;
+}
+
+#title {
+    margin: 5px 0;
+}
+
+#outline {
+    font-size: 1.2em;
+}
+
+#project-img {
+    max-width: 740px;
+    max-height: 500px;
+    margin: 15px 0 40px 0;
+    border-radius: 1%;
+}
+
+#project-content {
+    width: 90%;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+#counters {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+#views-counter {
+    margin: 5px 0;
+}
+
+#likes-form {
+    margin: 5px 0;
+}
+
+#like-button {
+    background: none;
+    border: none;
+    float: inline-end;
+    padding-right: 0;
+}
+
+#like-button:active {
+    border-radius: 25%;
+    padding-top: 0;
+    transform: scale(1.5);
+}

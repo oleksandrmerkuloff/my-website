@@ -1,0 +1,138 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inconsolata", serif;
+    font-weight: 400;
+    background: #183D3D;
+    flex-direction: column;
+    color: white;
+}
+
+#website-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 15vh;
+    box-shadow: rgba(181, 181, 181, 0.3) 0px 15px 12px;
+    background-color: #000000;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+
+#website-logo {
+    width: 50px;
+    height: auto;
+    border: 2px dotted #5C8374;
+    border-radius: 50%;
+}
+
+#website-navigation {
+    flex-grow: 1;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navigation-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+}
+
+#motto {
+    font-family: "Dancing Script", serif;
+    color: #e1ece8;
+    font-style: normal;
+    font-size: 24px;
+    margin-right: 5%;
+}
+
+.nav-link {
+    font-weight: 700;
+    text-decoration: none;
+    color: #93B1A6;
+}
+
+.nav-link:hover {
+    color: #faf8f3;
+}
+
+#container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    color: #faf7f0;
+    min-height: 70vh;
+    box-sizing: border-box;
+}
+
+#website-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: black;
+    opacity: 0.8;
+    color: #faf7f0;
+    padding: 20px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px){
+    #website-logo {
+        width: 5%;
+    }
+
+    #navigation-list {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #website-header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    #website-logo {
+        margin-bottom: 10px;
+        width: 70px;
+        margin: 20px;
+    }
+
+    #website-navigation {
+        width: 100%;
+    }
+
+    #navigation-list {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+    }
+
+    #container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #website-logo {
+        width: 60px;
+    }
+
+    #website-footer {
+        font-size: 0.9em;
+    }
+}

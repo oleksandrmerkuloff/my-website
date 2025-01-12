@@ -1,0 +1,72 @@
+.card {
+    display: flex;
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.project-img {
+    width: 300px;
+    height: 200px;
+    margin-right: 60px;
+    border-radius: 4%;
+}
+
+.card-body {
+    width: 50%;
+    flex: 1;
+}
+
+.title {
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+.outline {
+    font-size: 1.2em;
+}
+
+.project-link {
+    border-radius: 5%;
+    padding: 7px 7px 7px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+    text-decoration-color: gold;
+}
+
+.project-separator {
+    border: 1px solid white;
+    width: 50%;
+    margin: 50px auto;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.step-links a, .step-links span {
+    margin: 0 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.step-links a:hover {
+    background-color: #ddd;
+    color: rgb(150, 51, 51);
+    border: 1px solid black;
+    border-radius: 5%;
+}
